@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@100..900&display=swap');
 
-:root{
+:root {
     --orange-txt: #ff9000;
 }
 
@@ -34,7 +34,7 @@ img {
 .header {
     display: flex;
     width: 100%;
-    height: 5vh;
+    height: 4vw;
 }
 
 .content {
@@ -58,124 +58,123 @@ img {
 }
 
 .header__header::before, .header__header::after {
-    width: 70px;
+    width: 3vw;
+    height: 3vw;
     display: inline-block;
     content: " ";
     background-image: url("../img/star-svgrepo-com (1).svg");
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 70px;
-    margin-left: 10px;
-    margin-right: 10px;
+    background-size: contain;
+    background-position: center;
+    margin-left: 1vw;
+    margin-right: 1vw;
     transition: 1s;
 }
-.header__header:hover::before, .header__header:hover::after{
+
+.header__header:hover::before, .header__header:hover::after {
     animation-name: rotation;
     animation-duration: 10s;
     animation-iteration-count: infinite;
 }
 
 @keyframes rotation {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
 
 .introduction {
-    margin-top: 100px;
-    gap: 100px;
+    margin-left: 6vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
 }
 
 .introduction__joke {
     font-size: 3vw;
     color: white;
-    max-width: 1000px;
-    min-width: 100px;
+    width: 50vw;
     margin: 0;
 }
 
 .introduction__image {
     border-radius: 50%;
     object-fit: cover;
-    max-width: 500px;
-    min-width: 100px;
-    color: var(--orange-txt)
+    width: 31%;
 }
 
 .education {
     background-color: var(--orange-txt);
-    height: 100px;
+    height: 7vw;
     width: 100%;
-    margin-top: 100px;
-    gap: 100px;
-}
-
-.education__header {
-    margin-left: 100px;
+    padding-left: 8vw;
+    margin-top: 8vw;
+    gap: 5vw;
+    justify-content: flex-start;
 }
 
 .education__stages {
-    gap: 100px;
+    gap: 5vw;
 }
 
-.education__stages li{
+.education__stages li {
     font-size: 2vw;
     list-style-type: none;
 }
 
 .experience {
     color: var(--orange-txt);
-    height: 150px;
+    height: 7vw;
     width: 100%;
-    margin-top: 0px;
-    gap: 20px;
-    border-bottom: 5px solid var(--orange-txt);
+    padding-left: 8vw;
+    margin-top: 0;
+    gap: 5vw;
+    border-bottom: 0.5vw solid var(--orange-txt);
+    justify-content: flex-start;
+}
+
+.experience__header {
+    white-space: nowrap;
 }
 
 .experience__stages {
-    gap: 100px;
+    gap: 5vw;
 }
 
-.experience__stages li{
+.experience__stages li {
     font-size: 2vw;
     list-style-type: none;
-    max-width: 310px;
 }
 
 .chelyabinsk_image {
     border-radius: 50%;
     object-fit: cover;
-    width: 300px;
-    height: 400px;
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: var(--orange-txt)
+    width: 20%;
+    margin-left: 5vw;
+    margin-top: 1.6vw;
+    margin-bottom: 2vw;
 }
 
 .dog_image {
     border-radius: 50%;
     object-fit: cover;
-    width: 300px;
-    height: 400px;
-    margin-right: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: var(--orange-txt)
+    width: 20%;
+    margin-right: 5vw;
+    margin-top: 1.6vw;
+    margin-bottom: 2vw;
 }
 
 .achievements {
     background-color: black;
     color: var(--orange-txt);
     width: 50%;
-    padding-left: 50px;
+    padding-left: 5vw;
 }
 
 .achievements__header, .hobbies__header {
-    margin-top: 30px;
+    margin-top: 2.4vw;
     margin-bottom: 0;
 }
 
@@ -187,7 +186,8 @@ img {
     background-color: black;
     color: var(--orange-txt);
     width: 25%;
-    padding-left: 50px;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .hobbies__list {
@@ -195,33 +195,24 @@ img {
 }
 
 .footer {
-    border-top: 5px solid var(--orange-txt);
-    padding-top: 20px;
+    border-top: 0.5vw solid var(--orange-txt);
+    padding-top: 1.6vw;
 }
 
 .footer__logo {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
 }
 
 
 .footer__logo_telegram {
-    height: 45px;
-    width: 45px;
+    width: 2.5vw;
 }
 
 .footer__logo_github {
-    height: 45px;
-    width: auto;
+    width: 7vw;
 }
 
 .footer__logo_vk {
-    width: 45px;
-    height: auto;
+    width: 2.5vw;
 }
-
-/*@media screen and (max-width: 1050px) {*/
-/*    .education__stages li{*/
-/*        font-size: 16px;*/
-/*    }*/
-/*}*/
