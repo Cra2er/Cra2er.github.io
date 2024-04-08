@@ -219,8 +219,7 @@ img {
 
 .achievements_and_hobbies {
     align-items: stretch;
-}    padding-left: 4vw;
-
+}
 
 @media screen and (max-width: 600px) {
     .achievements_and_hobbies {
