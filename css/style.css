@@ -27,9 +27,6 @@ img {
     font-family: "Caveat", cursive;
 }
 
-.full_width {
-    width: 100%;
-}
 
 .header {
     display: flex;
@@ -47,10 +44,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
-
-.flex-stretch {
-    align-items: stretch;
 }
 
 .centered-block {
@@ -131,7 +124,7 @@ img {
     padding-left: 8vw;
     margin-top: 0;
     gap: 5vw;
-    border-bottom: 0.5vw solid var(--orange-txt);
+    border-bottom: 0.25vw solid var(--orange-txt);
     justify-content: flex-start;
 }
 
@@ -146,6 +139,11 @@ img {
 .experience__stages li {
     font-size: 2vw;
     list-style-type: none;
+}
+
+.main_info {
+    width: 100%;
+    align-items: stretch;
 }
 
 .chelyabinsk_image {
@@ -180,6 +178,7 @@ img {
 
 .achievements__list {
     font-size: 2vw;
+    padding-left: 4vw;
 }
 
 .hobbies {
@@ -192,10 +191,11 @@ img {
 
 .hobbies__list {
     font-size: 2vw;
+    padding-left: 4vw;
 }
 
 .footer {
-    border-top: 0.5vw solid var(--orange-txt);
+    border-top: 0.25vw solid var(--orange-txt);
     padding-top: 1.6vw;
 }
 
@@ -215,4 +215,27 @@ img {
 
 .footer__logo_vk {
     width: 2.5vw;
+}
+
+.achievements_and_hobbies {
+    align-items: stretch;
+}    padding-left: 4vw;
+
+
+@media screen and (max-width: 600px) {
+    .achievements_and_hobbies {
+        flex-direction: column;
+    }
+    .achievements {
+        padding: 0 0 0 10vw;
+    }
+    .hobbies {
+        padding: 0 0 0 10vw;
+    }
+    .chelyabinsk_image {
+        width: 25%;
+    }
+    .dog_image {
+        width: 25%;
+    }
 }
