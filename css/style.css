@@ -217,7 +217,7 @@ img {
 
 .footer {
     border-top: 0.25vw solid var(--orange-txt);
-    padding-top: 1.6vw;
+    padding-top: 1vw;
 }
 
 .footer__logo {
