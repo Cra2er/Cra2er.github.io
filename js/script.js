@@ -291,7 +291,7 @@ function validateTel(tel_data) {
 }
 
 function validateEmail(email_data) {
-  return /^[a-zA-Z0-9\-.]*@[a-zA-Z0-9\-.]*.[a-zA-Z]*$/.test(email_data);
+  return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(email_data);
 }
 
 function validateText(feedback_data) {
@@ -361,7 +361,15 @@ function updateCountdown() {
   let days = Math.floor(left_time % (1000 * 60 * 60 * 24 * 365.24) / (1000 * 60 * 60 * 24));
   let years = Math.floor(left_time / (1000 * 60 * 60 * 24 * 365.24));
 
-  countdown_time.innerHTML = years + 'л ' + days + 'д ' + hours + 'ч ' + minutes + 'м ' + seconds + 'с ';
+  countdown_time.innerHTML = years + 'л ' + days + 'д ' + hours + 'ч ' + minutes + 'м ' + seconds;
+  let ost = seconds % 10;
+  let sec = 'секунд';
+  if (ost % 10 === 1) {
+    sec = 'секунда';
+  } else if (ost < 5 && ost !== 0) {
+    sec = 'секунды';
+  }
+  countdown_time.innerHTML += sec;
 }
 
 updateCountdown();
@@ -373,17 +381,18 @@ setInterval(function () {
 
 let headerHeader = document.querySelector('.header__header');
 let menu = document.querySelector('.menu');
+let sum_height = headerHeader.offsetHeight + menu.offsetHeight;
+addEventListener('resize', function () {
+  sum_height = headerHeader.offsetHeight + menu.offsetHeight;
+})
 
-setInterval(
-  function fixMenu() {
-    window.addEventListener('scroll', function () {
-      if (window.pageYOffset >= headerHeader.style.height + menu.style.height) {
-        menu.classList.add('fixed_menu');
-      } else {
-        menu.classList.remove('fixed_menu');
-      }
-    });
-  }, 30);
+window.addEventListener('scroll', function () {
+  if (window.pageYOffset >= sum_height) {
+    menu.classList.add('fixed_menu');
+  } else {
+    menu.classList.remove('fixed_menu');
+  }
+});
 
 
 //svg rotating
