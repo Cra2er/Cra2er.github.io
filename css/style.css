@@ -305,6 +305,10 @@ h2 {
   transition: transform 0.3s ease-out;
 }
 
+.form-popup-container {
+  overflow-x: scroll;
+}
+
 .form-body {
   color: var(--orange-txt);
 }
