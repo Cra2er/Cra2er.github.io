@@ -1,397 +1,671 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@100..900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-
-/* div {
-    border: 1px solid red;
-}
-
-header {
-    border: 1px solid blue;
-} */
 
 :root {
-    --orange-txt: #ff9000;
+  --orange-txt: #ff9000;
 }
 
 h1 {
-    color: var(--orange-txt);
-    font-size: 5vw;
+  color: var(--orange-txt);
+  font-size: 5vw;
 }
 
 h2 {
-    font-size: 4vw;
-}
-
-img {
-    object-fit: cover;
+  font-size: 4vw;
 }
 
 .link {
-    text-decoration: none;
-    color: #ff4f00;
+  text-decoration: none;
+  color: #ff4f00;
+}
+
+.black-link {
+  text-decoration: none;
+  color: black;
 }
 
 .page {
-    background-color: #000000;
-    font-family: "Caveat", cursive;
+  background-color: #000000;
+  font-family: "Caveat", cursive;
 }
 
 
 .header {
-    display: flex;
-    width: 100%;
-    height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  width: 100%;
+  height: 7vw;
+}
+
+.header__header {
+  margin: 0;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .flex-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
 }
 
-.centered-block {
-    margin: auto;
+.header__star {
+  fill: var(--orange-txt);
+  width: 4vw;
+  height: 4vw;
 }
 
-.header__header::before, .header__header::after {
-    width: 3vw;
-    height: 3vw;
-    display: inline-block;
-    content: " ";
-    background-image: url("../img/star-svgrepo-com (1).svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    transition: 1s;
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: white;
+  font-size: 3vw;
+  text-align: center;
+  gap: 1vw;
+  margin-top: 1vw;
 }
 
-.header__header:hover::before, .header__header:hover::after {
-    animation-name: rotation;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+.fixed_menu {
+  z-index: 1;
+  position: sticky;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 }
 
-@keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.menu__item {
+  width: 13vw;
+  background-color: var(--orange-txt);
+  border-radius: 1vw;
+  padding-bottom: 0.3vw;
 }
 
 .introduction {
-    margin-left: 6vw;
-    margin-right: 2vw;
-    margin-top: 5vw;
+  margin-left: 6vw;
+  margin-right: 2vw;
+  margin-top: 5vw;
 }
 
 .introduction__joke {
-    font-size: 3vw;
-    color: white;
-    width: 50vw;
-    margin: 0;
+  font-size: 3vw;
+  color: white;
+  width: 50vw;
+  margin: 0;
+  gap: 1vw;
+}
+
+.form-link {
+  color: grey;
+  cursor: pointer;
 }
 
 .introduction__image {
-    border-radius: 50%;
-    object-fit: cover;
-    width: 31%;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 31%;
 }
 
 .education {
-    background-color: var(--orange-txt);
-    height: 7vw;
-    width: 100%;
-    padding: 10px 5vw;
-    margin-top: 8vw;
-    gap: 5vw;
-    justify-content: flex-start;
+  background-color: var(--orange-txt);
+  height: 7vw;
+  width: 100%;
+  padding: 10px 5vw;
+  margin-top: 8vw;
+  gap: 5vw;
+  justify-content: flex-start;
 }
 
 .education__stages {
-    padding: 0;
-    gap: 5vw;
+  padding: 0;
+  gap: 5vw;
 }
 
 .education__stages li {
-    font-size: 2vw;
-    list-style-type: none;
-    width: auto;
-    white-space: nowrap;
+  font-size: 2vw;
+  list-style-type: none;
+  width: auto;
+  white-space: nowrap;
 }
 
 .experience {
-    color: var(--orange-txt);
-    height: 7vw;
-    width: 100%;
-    /* padding-left: 8vw; */
-    padding: 10px 5vw;
-    margin-top: 0;
-    gap: 5vw;
-    border-bottom: 0.25vw solid var(--orange-txt);
-    justify-content: flex-start;
+  color: var(--orange-txt);
+  height: 7vw;
+  width: 100%;
+  /* padding-left: 8vw; */
+  padding: 10px 5vw;
+  margin-top: 0;
+  gap: 5vw;
+  border-bottom: 0.25vw solid var(--orange-txt);
+  justify-content: flex-start;
 }
 
 .experience__header {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .experience__stages {
-    padding: 0;
-    gap: 5vw;
+  padding: 0;
+  gap: 5vw;
 }
 
 .experience__stages li {
-    font-size: 2vw;
-    list-style-type: none;
-    white-space: nowrap;
-    width: auto;
+  font-size: 2vw;
+  list-style-type: none;
+  white-space: nowrap;
+  width: auto;
 }
 
 .main_info {
-    width: 100%;
-    align-items: stretch;
+  width: 100%;
+  align-items: stretch;
 }
 
-.chelyabinsk_image {
-    border-radius: 50%;
-    object-fit: cover;
-    width: 20%;
-    margin-left: 5vw;
-    margin-top: 1.6vw;
-    margin-bottom: 2vw;
+.info__image {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 20vw;
+  height: 30vw;
+  margin-top: 1.6vw;
+  margin-bottom: 2vw;
 }
 
-.dog_image {
-    border-radius: 50%;
-    object-fit: cover;
-    width: 20%;
-    margin-right: 5vw;
-    margin-top: 1.6vw;
-    margin-bottom: 2vw;
+.image_chelyabinsk {
+  margin-left: 5vw;
+}
+
+.image_dog {
+  margin-right: 5vw;
 }
 
 .achievements {
-    background-color: black;
-    color: var(--orange-txt);
-    width: 50%;
-    padding: 0 0 0 5vw;
+  background-color: black;
+  color: var(--orange-txt);
+  width: 50%;
+  padding: 0 0 0 5vw;
 }
 
 .achievements__header, .hobbies__header {
-    margin-top: 2.4vw;
-    margin-bottom: 0;
+  margin-top: 2.4vw;
+  margin-bottom: 0;
 }
 
 .achievements__list {
-    font-size: 2vw;
-    padding-left: 4vw;
+  font-size: 2vw;
+  padding-left: 4vw;
 }
 
 .hobbies {
-    background-color: black;
-    color: var(--orange-txt);
-    width: 25%;
-    padding-left: 5vw;
-    padding-right: 5vw;
+  background-color: black;
+  color: var(--orange-txt);
+  width: 25%;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .hobbies__list {
-    font-size: 2vw;
-    padding-left: 4vw;
+  font-size: 2vw;
+  padding-left: 4vw;
 }
 
 .footer {
-    border-top: 0.25vw solid var(--orange-txt);
-    padding-top: 1vw;
+  border-top: 0.25vw solid var(--orange-txt);
+  padding-top: 0.7vw;
+  padding-bottom: 0.5vw;
 }
 
 .footer__logo {
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
 }
 
 
 .footer__logo_telegram {
-    width: 2.5vw;
+  width: 2.5vw;
 }
 
 .footer__logo_github {
-    width: 7vw;
+  width: 7vw;
 }
 
 .footer__logo_vk {
-    width: 2.5vw;
+  width: 2.5vw;
 }
 
 .achievements_and_hobbies {
-    align-items: stretch;
+  align-items: stretch;
+}
+
+.popup__background {
+  z-index: 2;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.inactive {
+  visibility: hidden;
+  z-index: -1;
+}
+
+.popup-container {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.gallery-popup__button {
+  width: 7%;
+}
+
+.gallery-popup__picture {
+  border-radius: 2%;
+  object-fit: cover;
+  width: 40vw;
+  height: 40vw;
+}
+
+.gallery-popup__button:hover {
+  cursor: pointer;
+}
+
+.button_next {
+  transform: rotate(180deg);
+}
+
+.gallery {
+  display: none;
+}
+
+.form-popup-container, .timed-popup-container, .info-popup-container {
+  transition: transform 0.3s ease-out;
+}
+
+.form-body {
+  color: var(--orange-txt);
+}
+
+.popup-body_with-text {
+  position: fixed;
+  margin: auto;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  border-radius: 1vw;
+  border: var(--orange-txt) solid 5px;
+  padding: 15px;
+  font-size: 50px;
+  min-width: 270px;
+  color: white;
+  text-align: center;
+}
+
+.info-popup-body {
+  width: 270px;
+  height: 100px;
+  border: red solid 5px;
+}
+
+.form-body__heading {
+  font-size: 50px;
+  color: gray;
+}
+
+.form-body__label {
+  font-size: 28px;
+  font-family: "Abyssinica SIL", serif;
+  font-weight: 400;
+  color: var(--orange-txt);
+  text-shadow: 3px 3px 10px var(--orange-txt);
+  margin: 20px 20px 0 20px;
+}
+
+.form-body__input {
+  height: 30px;
+  width: 80%;
+  background: black;
+  border: 2px solid rgba(128, 128, 128, 0.2);
+  font-size: 20px;
+  margin: 10px 20px 20px 20px;
+  color: white;
+  padding: 3px 10px 3px 10px;
+}
+
+textarea.form-body__input {
+  min-width: 45%;
+  max-width: 90%;
+  min-height: 50px;
+  max-height: 20vw;
+}
+
+.form-body__button {
+  display: block;
+  height: 30px;
+  width: fit-content;
+  font-size: 20px;
+  font-family: "Noah", serif;
+  font-weight: 600;
+  border: 2px solid var(--orange-txt);
+  margin: 10px 20px 20px 20px;
+  color: white;
+  background-color: black;
+  padding: 3px 10px 5px 10px;
+}
+
+.form-body__button:hover:not([disabled]) {
+  background: var(--orange-txt);
+  border: 2px solid;
+  color: black;
+}
+
+.button-loading {
+  background: black;
+  color: var(--orange-txt);
+}
+
+.button-success {
+  background: green;
+}
+
+.button-failure {
+  background: red;
+}
+
+.popup-text-container {
+  display: flex;
+  height: 240px;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.popup-text {
+  display: flex;
+  font-family: "Padauk", serif;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  text-shadow: 3px 3px 10px var(--orange-txt);
+  margin-bottom: 10px;
+}
+
+
+.timed-popup__link {
+  text-decoration: none;
+  color: var(--orange-txt);
+}
+
+.countdown {
+  display: flex;
+  color: white;
+  width: 100%;
+  height: 65vw;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vw;
+  align-items: center;
+  font-size: 8vw;
+  padding-bottom: 1vw;
+  border-top: 0.25vw solid var(--orange-txt);
 }
 
 @media screen and (max-width: 600px) {
-    * {
-        box-sizing: border-box;
-    }
-    .header {
-        height: auto;
-    }
-    .header__header {
-        font-size: 10vw;
-        text-align: center;
-    }
-    .header__header::before, .header__header::after {
-        display: none;
-    }
-    .introduction {
-        flex-direction: column-reverse;
-        margin: 0;
-        padding: 20px;
-    }
-    .introduction__image {
-        width: 100%;
-    }
-    .introduction__joke {
-        margin-top: 20px;
-        width: 100%;
-        font-size: 11vw;
-    }
-    .education {
-        height: auto;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0;
-        gap: 0;
-    }
-    .education__header {
-        font-size: 10vw;
-        margin: 0;
-    }
-    .education__stages {
-        flex-wrap: wrap;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        gap: 5px;
-    }
-    .education__stages li {
-        font-size: 8vw;
-        width: 90vw;
-        margin: 0;
-        text-align: center;
-    }
-    .experience {
-        height: auto;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0;
-        gap: 0;
-    }
-    .experience__header {
-        font-size: 10vw;
-        margin: 0;
-    }
-    .experience__stages {
-        flex-wrap: wrap;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        gap: 5px;
-    }
-    .experience__stages li {
-        font-size: 8vw;
-        width: 90vw;
-        margin: 0;
-        text-align: center;
-    }
-    .main_info {
-        flex-wrap: wrap;
-    }
-    .achievements_and_hobbies {
-        flex-direction: column;
-        width: 100%;
-    }
-    .achievements {
-        padding: 0 0 0 10vw;
-        width: 100%;
-    }
-    .achievements__header {
-        font-size: 10vw;
-        width: fit-content;
-    }
-    .achievements__list {
-        font-size: 8vw;
-        width: fit-content;
-    }
-    .hobbies {
-        padding: 0 0 0 10vw;
-        width: 100%;
-    }
-    .hobbies__header {
-        font-size: 10vw;
-        width: fit-content;
-    }
-    .hobbies__list {
-        font-size: 8vw;
-        width: fit-content;
-    }
-    .chelyabinsk_image {
-        /* width: 25%; */
-        width: 100%;
-        margin: 20px;
-    }
-    .dog_image {
-        width: 100%;
-        /* width: 25%; */
-        margin: 20px;
-    }
-    .footer {
-        height: 15vw;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-    }
-    .footer__content {
-        display: flex;
-        height: 100%;
-        align-items: center;
-        gap: 5px;
-        margin: auto;
-    }
-    .footer__logo {
-        margin: auto;
-        height: 100%;
-        width: 180vw;
-        object-fit: cover;
-    }
-    .footer__logo_telegram {
-        width: 30px;
-        height: auto;
-        object-fit: cover;
-    }
+  * {
+    box-sizing: border-box;
+  }
 
-    .footer__logo_github {
-        width: 90px;
-        height: auto;
-        object-fit: cover;
-    }
+  .popup-body_with-text {
+    box-sizing: content-box;
+  }
 
-    .footer__logo_vk {
-        width: 30px;
-        height: auto;
-        object-fit: cover;
-    }
+  .form-body__heading {
+    font-size: 35px;
+  }
+
+  .form-body__label {
+    font-size: 22px;
+  }
+
+  .header {
+    height: auto;
+  }
+
+  .header__header {
+    font-size: 10vw;
+    text-align: center;
+  }
+
+  .header__star {
+    display: none;
+  }
+
+  .menu {
+    margin-top: 2vw;
+  }
+
+  .menu__item {
+    width: 30vw;
+    font-size: 6vw;
+  }
+
+  .introduction {
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .introduction__image {
+    width: 100%;
+  }
+
+  .introduction__joke {
+    margin-top: 4vw;
+    width: 100%;
+    font-size: 11vw;
+  }
+
+  .education {
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+
+  .education__header {
+    font-size: 10vw;
+    margin: 0;
+  }
+
+  .education__stages {
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+  }
+
+  .education__stages li {
+    font-size: 8vw;
+    width: 90vw;
+    margin: 0;
+    text-align: center;
+  }
+
+  .experience {
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+
+  .experience__header {
+    font-size: 10vw;
+    margin: 0;
+  }
+
+  .experience__stages {
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+  }
+
+  .experience__stages li {
+    font-size: 8vw;
+    width: 90vw;
+    margin: 0;
+    text-align: center;
+  }
+
+  .main_info {
+    flex-wrap: wrap;
+  }
+
+  .achievements_and_hobbies {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .achievements {
+    padding: 0 0 0 10vw;
+    width: 100%;
+  }
+
+  .achievements__header {
+    font-size: 10vw;
+    width: fit-content;
+  }
+
+  .achievements__list {
+    font-size: 8vw;
+    width: fit-content;
+  }
+
+  .hobbies {
+    padding: 0 0 0 10vw;
+    width: 100%;
+  }
+
+  .hobbies__header {
+    font-size: 10vw;
+    width: fit-content;
+  }
+
+  .hobbies__list {
+    font-size: 8vw;
+    width: fit-content;
+  }
+
+  .info__image {
+    width: 90vw;
+    height: auto;
+    margin: 0;
+  }
+
+  .image_chelyabinsk {
+    margin-top: 5vw;
+  }
+
+  .image_dog {
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+  }
+
+  .countdown {
+    font-size: 12vw;
+  }
+
+  .footer {
+    height: 8vw;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 3vw;
+  }
+
+  .footer__logo {
+    margin: auto;
+    height: 100%;
+    width: 180vw;
+    object-fit: cover;
+  }
+
+  .footer__logo_telegram {
+    width: 6vw;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .footer__logo_github {
+    width: 18vw;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .footer__logo_vk {
+    width: 6vw;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .gallery-popup__picture {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .gallery-popup-container {
+    flex-direction: column;
+  }
+
+  .gallery-popup__button {
+    width: 15%;
+  }
+
+  .button_prev {
+    transform: rotate(90deg);
+  }
+
+  .button_next {
+    transform: rotate(-90deg);
+  }
+
+  .popup-text {
+    font-size: 22px;
+  }
 }
